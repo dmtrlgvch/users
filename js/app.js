@@ -78,10 +78,10 @@ function renderRows(table_body, users) {
 }
 function createRow(user) {
   return `<tr data-id="${user.id}" class="table-row">
-  <td data-label="Name">${user.name}</td>
-  <td data-label="Username">${user.username}</td>
-  <td data-label="Email">${user.email}</td>
-  <td data-label="Website">${user.website}</td>
+  <td class="table-data" data-label="Name">${user.name}</td>
+  <td class="table-data" data-label="Username">${user.username}</td>
+  <td class="table-data" data-label="Email">${user.email}</td>
+  <td class="table-data" data-label="Website">${user.website}</td>
 </tr>`
 }
 async function getData(url) {

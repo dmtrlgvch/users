@@ -50,16 +50,17 @@ table {
   box-sizing: border-box;
 }
 
+
+body{
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.25;
+}
 .container {
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
-}
-body{
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 14px;
-  line-height: 1.25;
 }
 .table {
   border: 1px solid #ccc;
@@ -70,13 +71,13 @@ body{
   table-layout: fixed;
 }
 
-table tr {
+.table-row {
   background-color: #f8f8f8;
   border: 1px solid #ddd;
   padding: .35em;
 }
-table th,
-table td {
+.table-heading,
+.table-data {
   padding: .625em;
   text-align: center;
   cursor: pointer;
@@ -147,6 +148,37 @@ cursor: pointer;
 
 
 @media screen and (max-width: 767px) {
+  .table {
+    border: 0;
+  }
+  .table-row {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  .table-row__mobile {
+    display: none;
+  }
+
+  .table-data{
+    border-bottom: 1px solid #ddd;
+    font-size: .8em;
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+  }
+  .table-data::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+
+
   .modal-col {
     width: 100%;
   }
