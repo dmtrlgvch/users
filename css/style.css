@@ -76,6 +76,10 @@ body{
   border: 1px solid #ddd;
   padding: .35em;
 }
+.table-row__mobile {
+  display: none;
+}
+
 .table-heading,
 .table-data {
   padding: .625em;
@@ -96,7 +100,7 @@ body{
 
 
 
-
+/* Start modal styles */
 .modal-backdrop {
   position: fixed;
   left: 0;
@@ -152,14 +156,17 @@ cursor: pointer;
     border: 0;
   }
   .table-row {
-    border-bottom: 3px solid #ddd;
     display: block;
+    border-bottom: 3px solid #ddd;
     margin-bottom: .625em;
   }
   .table-row__mobile {
+    display: block;
+  }
+  .table-row__desktop {
     display: none;
   }
-
+  
   .table-data{
     border-bottom: 1px solid #ddd;
     font-size: .8em;
@@ -176,9 +183,6 @@ cursor: pointer;
     font-weight: bold;
     text-transform: uppercase;
   }
-
-
-
   .modal-col {
     width: 100%;
   }

@@ -13,8 +13,19 @@
           User List
         </caption>
         <thead id="table-head">
-
           <tr class="table-row table-row__mobile">
+            <th>
+                <select name="sort" id="sort-select">
+                  <option disabled selected>Sorting</option>
+                  <option value="name">Name</option>
+                  <option value="username">Username</option>
+                  <option value="email">Email</option>
+                  <option value="website">Website</option>
+                </select>
+            </th>
+          </tr>
+
+          <tr class="table-row table-row__desktop">
             <th scope="col" class="table-heading" data-key="name">Name &#11139;</th>
             <th scope="col" class="table-heading" data-key="username">Username &#11139;</th>
             <th scope="col" class="table-heading" data-key="email">Email &#11139;</th>

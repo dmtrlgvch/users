@@ -2,12 +2,15 @@ const tableHeadEl = document.getElementById('table-head')
 const tableBodyEl = document.getElementById('table-body')
 const modalEl = document.getElementById('modal')
 const modalBodyEl = document.getElementById('modal-body')
+const sortSelectEl = document.getElementById('sort-select')
 
 const url = 'https://jsonplaceholder.typicode.com/users'
 getData(url)
 let users = []
 
-
+sortSelectEl.addEventListener('change', event => {
+  sortUsers(event.target.value)
+})
 tableHeadEl.addEventListener('click', event => {
   const rowEl = event.target.closest('.table-heading')
   if (rowEl) {
