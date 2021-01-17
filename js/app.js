@@ -1,10 +1,28 @@
+const tableHeadEl = document.getElementById('table-head')
 const tableBodyEl = document.getElementById('table-body')
 const modalEl = document.getElementById('modal')
 const modalBodyEl = document.getElementById('modal-body')
 
 const url = 'https://jsonplaceholder.typicode.com/users'
-let users = []
 getData(url)
+let users = []
+
+
+tableHeadEl.addEventListener('click', event => {
+  const rowEl = event.target.closest('.table-heading')
+  if (rowEl) {
+    const key = rowEl.dataset.key
+    sortUsers(key)
+  }
+})
+function sortUsers(key) {
+  users.sort((a, b) => {
+    return a[key].localeCompare(b[key])
+  })
+  renderRows(tableBodyEl, users)
+}
+
+
 
 
 tableBodyEl.addEventListener('click', event => {
@@ -19,7 +37,6 @@ modalEl.addEventListener('click', event => {
     closeModal()
   }
 })
-
 
 function showModal(userId) {
   modalEl.classList.add('is-visible')
