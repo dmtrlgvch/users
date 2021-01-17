@@ -30,11 +30,95 @@
             <th scope="col" class="table-heading" data-key="username">Username &#11139;</th>
             <th scope="col" class="table-heading" data-key="email">Email &#11139;</th>
             <th scope="col" class="table-heading" data-key="website">Website &#11139;</th>
+            <th scope="col" class="table-heading">Delete</th>
           </tr>
         </thead>
 
         <tbody id="table-body"></tbody>
       </table>
+
+      <form class="form-add-user" id="form-add-user" name="form">
+        <div class="form-group">
+          <h3 class="form-group__title">Main info</h3>
+
+          <label>
+            User ID
+            <input type="text" name="id">
+          </label>
+          <label>
+            Name
+            <input type="text" name="name">
+          </label>
+          <label>
+            Username
+            <input type="text" name="username">
+          </label>
+          <label>
+            Email
+            <input type="email" name="email">
+          </label>
+          <label>
+            Phone
+            <input type="tel" name="phone">
+          </label>
+          <label>
+            Website
+            <input type="text" name="website">
+          </label>
+        </div>
+
+        <div class="form-group">
+          <h3 class="form-group__title">Address</h3>
+          <label>
+            Street
+            <input type="text" name="street">
+          </label>
+          <label>
+            Suite
+            <input type="text" name="suite">
+          </label>
+          <label>
+            City
+            <input type="text" name="city">
+          </label>
+          <label>
+            Zipcode
+            <input type="text" name="zipcode">
+          </label>
+        </div>
+
+        <div class="form-group">
+          <h3 class="form-group__title">GEO</h3>
+          <label>
+            Lat
+            <input type="text" name="lat">
+          </label>
+          <label>
+            Lng
+            <input type="text" name="lng">
+          </label>
+        </div>
+
+        <div class="form-group">
+          <h3 class="form-group__title">Company</h3>
+          <label>
+            Company name
+            <input type="text" name="company-name">
+          </label>
+          <label>
+            Company catch phrase
+            <input type="text" name="company-catchPhrase">
+          </label>
+          <label>
+            Company bs
+            <input type="text" name="company-bs">
+          </label>
+        </div>
+
+        <button class="btn btn-add-user" type="submit">Submit</button>
+      </form>
+
+
     </div>
 
     <div class="modal-backdrop" id="modal">

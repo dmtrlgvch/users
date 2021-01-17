@@ -55,6 +55,7 @@ body{
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.25;
+  padding-bottom: 100px;
 }
 .container {
   max-width: 1140px;
@@ -97,7 +98,9 @@ body{
   letter-spacing: .1em;
   text-transform: uppercase;
 }
-
+.btn-delete-user {
+  cursor: pointer;
+}
 
 
 /* Start modal styles */
@@ -149,6 +152,34 @@ cursor: pointer;
   font-weight: 700;
 }
 
+.form-add-user {
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 50%;
+}
+.form-group__title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.btn {
+  cursor: pointer;
+}
+.btn-add-user {
+  font-size: 20px;
+  margin: 0 auto;
+  padding: 7px 15px;
+}
 
 
 @media screen and (max-width: 767px) {
